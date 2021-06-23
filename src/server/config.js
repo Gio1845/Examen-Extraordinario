@@ -9,6 +9,8 @@ const errorHandler = require('errorhandler');
 const routes = require('../routes/index'); 
 
 
+const {allowInsecurePrototypeAccess} = require('@handlebars/allow-prototype-access');  
+const handlebars = require('handlebars');
 module.exports = app => {
 
     app.set('port', process.env.PORT || 3000);
@@ -18,7 +20,8 @@ module.exports = app => {
         partialsDir: path.join(app.get('views'), 'partials'),
         layoutsDir: path.join(app.get('views'), 'layouts'),
         extname: '.hbs',
-        helpers: require('./helpers')
+        helpers: require('./helpers'),
+        handlebars: allowInsecurePrototypeAccess(handlebars)
     }));
     app.set('view engine', '.hbs');
 
@@ -34,6 +37,7 @@ module.exports = app => {
     if('development' === app.get('env')) {
         app.use(errorHandler);
     }
+    
 
     return app;
 }

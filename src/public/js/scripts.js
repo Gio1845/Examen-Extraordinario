@@ -1,4 +1,4 @@
-
+console.log('leyendo')
 $('#post-comment').hide();
 $('#btn-toggle-comment').click(e => {
   e.preventDefault();
@@ -18,21 +18,22 @@ $('#btn-like').click(function(e){
     });
 });
 
-$('#btn-delete').click(function(e){
+$('#btn-delete').click(function (e) {
     e.preventDefault();
     let $this = $(this);
-
-    const response = confirm('¿Estas seguro de Eliminar esta imagen?');
+    const response = confirm('Are you sure you want to delete this image?');
     if (response) {
-        let imgId = $this.data('id');
-        $.ajax({
-            url: '/images/' + imgId,
-            type: 'DELETE'
-        })
-        .done(function (result){
-            $this.removeClass('btn-danger').addClass('btn-success');
-            $this.find('i').removeClass('fa-tiems').addClass('fa-check');
-            $this.append('<span>Eliminado!</span>');
+      let imgId = $(this).data('id');
+      console.log(imgId);
+      $.ajax({
+        url: '/images/' + imgId,
+        type: 'DELETE'
+      })
+        .done(function(result) {
+        console.log(result);
+          $this.removeClass('btn-danger').addClass('btn-success');
+          $this.find('i').removeClass('fa-times').addClass('fa-check');
+          $this.append('<span>Deleted!</span>');
         });
     }
-});
+  });
