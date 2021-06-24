@@ -12,7 +12,7 @@ Las imagenes mas reientes apareceran abajo donde puedese dar clic a la que mas t
 donde seras dirigido a su propia pagina donde podras darle un like y dejar un comentario (para dejar un comentario da click en dejar un comentario para que se te abra un formulario)
 ![Captura4](https://user-images.githubusercontent.com/47793084/123181505-ab355680-d44a-11eb-9699-690bc132dfb7.PNG)
 
-en cualquiera de las paginas (principal/cada post) podras ver las estadisticas total de imagenes, likes, vistas y comentarios 
+en cualquiera de las paginas (principal/cada post) podras ver las estadisticas total de imagenes, likes, vistas y comentarios (para ver que se agregaron estos elementos espere a que la pagina cargue totalmente)
 ![Captura5](https://user-images.githubusercontent.com/47793084/123181807-4a5a4e00-d44b-11eb-8266-a6e884804266.PNG)
 
 tambien mas abajo podras ver las imagenes mas populares (las que tienen mas likes)
